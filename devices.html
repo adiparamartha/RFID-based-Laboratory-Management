@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Integrated Laboratory System - Devices List</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="home.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">ILS <sup>1.0</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="home.html.html">
+                    <i class="fas fa-desktop"></i>
+                    <span>Dashboard</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Database Alat
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item active">
+                <a class="nav-link" href="device.htmls">
+                    <i class="far fa-hdd"></i>
+                    <span>Ketersediaan Alat</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Peminjaman & Pengembalian
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link" href="pinjam.html">
+                    <i class="fas fa-fw fa fa-angle-double-left"></i>
+                    <span>Peminjaman Alat</span>
+                </a>
+            </li>
+
+            <!-- Nav Item - Charts -->
+            <li class="nav-item">
+                <a class="nav-link" href="kembali.html">
+                    <i class="fas fa-fw fa fa-angle-double-right"></i>
+                    <span>Pengembalian Alat</span></a>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider d-none d-md-block">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+
+                    <div class="mt-3">
+                        <h6>Integrated Laboratory System v1.0</h6>
+                    </div>
+
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Laboratory Admin</span>
+                                <img class="img-profile rounded-circle" src="https://source.unsplash.com/QAB-WJcbgJk/60x60">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-3">
+                        <h1 class="h3 mb-0 text-gray-800">Devices Status</h1>
+                    </div>
+
+                    <div class="row">
+                        <div class="col dropdown-divider mb-3"></div>
+                    </div>
+
+                    <!-- Content Row -->
+                    <div class="row">
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-4 col-md-8 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">Nama Gedung</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800 mt-3" id="namaGedung">PENDIDIKAN TEKNIK ELEKTRONIKA - PTA</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-hdd fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-4 col-md-8 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Nama Laboratorium</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800 mt-3" id="namaLaboratorium">LABORATORIUM DIGITAL</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-hdd fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-4 col-md-8 mb-4">
+                            <div class="card border-left-primary shadow h-100 py-2">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-danger text-uppercase mb-1">Jumlah Alat</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800 mt-3" id="jumlahAlatLab">...</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-hdd fa-2x text-gray-300"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <!--<div class="col-xl-4 col-md-8 mb-4">-->
+                        <!--    <div class="card border-left-success shadow h-100 py-2">-->
+                        <!--        <div class="card-body">-->
+                        <!--            <div class="row no-gutters align-items-center">-->
+                        <!--                <div class="col mr-2">-->
+                        <!--                    <div class="text-xs font-weight-bold text-success text-uppercase mb-1"> Total Tersedia</div>-->
+                        <!--                    <div class="h5 mb-0 font-weight-bold text-gray-800 mt-3" id="jumlahAlatLabTersedia">...</div>-->
+                        <!--                </div>-->
+                        <!--                <div class="col-auto">-->
+                        <!--                    <i class="fas fa-check fa-2x text-gray-300"></i>-->
+                        <!--                </div>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+
+                        <!-- Earnings (Monthly) Card Example -->
+                        <!--<div class="col-xl-4 col-md-8 mb-4">-->
+                        <!--    <div class="card border-left-danger shadow h-100 py-2">-->
+                        <!--        <div class="card-body">-->
+                        <!--            <div class="row no-gutters align-items-center">-->
+                        <!--                <div class="col mr-2">-->
+                        <!--                    <div class="text-xs font-weight-bold text-danger text-uppercase mb-1"> Total Tidak Tersedia</div>-->
+                        <!--                    <div class="h5 mb-0 font-weight-bold text-gray-800 mt-3" id="jumlahAlatLabTdkTersedia">...</div>-->
+                        <!--                </div>-->
+                        <!--                <div class="col-auto">-->
+                        <!--                    <i class="fas fa-times fa-2x text-gray-300"></i>-->
+                        <!--                </div>-->
+                        <!--            </div>-->
+                        <!--        </div>-->
+                        <!--    </div>-->
+                        <!--</div>-->
+                    </div>
+
+                    <!--Content of Devices Lists-->
+                    <div class="card shadow mb-4 border-bottom-primary">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">List of Devices</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-borderless" id="dataTable" width="100%" cellspacing="0">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Nama Alat</th>
+                                            <th>Tipe/Merek</th>
+                                            <th>UID Tag</th>
+                                            <th>Status Peminjaman</th>
+                                            <!--<th>Tersedia Kembali</th>-->
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>1</td>
+                                            <td id="namaAlat1">...</td>
+                                            <td id="merk1">...</td>
+                                            <td id="uid1">...</td>
+                                            <td class="font-weight-bold" id="status1">...</td>
+                                            <!--<td id="returnDate1">...</td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td id="namaAlat2">...</td>
+                                            <td id="merk2">...</td>
+                                            <td id="uid2">...</td>
+                                            <td class="font-weight-bold" id="status2">...</td>
+                                            <!--<td id="returnDate2">...</td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>3</td>
+                                            <td id="namaAlat3">...</td>
+                                            <td id="merk3">...</td>
+                                            <td id="uid3">...</td>
+                                            <td class="font-weight-bold" id="status3">...</td>
+                                            <!--<td id="returnDate3">...</td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>4</td>
+                                            <td id="namaAlat4">...</td>
+                                            <td id="merk4">...</td>
+                                            <td id="uid4">...</td>
+                                            <td class="font-weight-bold" id="status4">...</td>
+                                            <!--<td id="returnDate4">...</td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td id="namaAlat5">...</td>
+                                            <td id="merk5">...</td>
+                                            <td id="uid5">...</td>
+                                            <td class="font-weight-bold" id="status5">...</td>
+                                            <!--<td id="returnDate5">...</td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>6</td>
+                                            <td id="namaAlat6">...</td>
+                                            <td id="merk6">...</td>
+                                            <td id="uid6">...</td>
+                                            <td class="font-weight-bold" id="status6">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>7</td>
+                                            <td id="namaAlat7">...</td>
+                                            <td id="merk7">...</td>
+                                            <td id="uid7">...</td>
+                                            <td class="font-weight-bold" id="status7">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>8</td>
+                                            <td id="namaAlat8">...</td>
+                                            <td id="merk8">...</td>
+                                            <td id="uid8">...</td>
+                                            <td class="font-weight-bold" id="status8">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>9</td>
+                                            <td id="namaAlat9">...</td>
+                                            <td id="merk9">...</td>
+                                            <td id="uid9">...</td>
+                                            <td class="font-weight-bold" id="status9">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>10</td>
+                                            <td id="namaAlat10">...</td>
+                                            <td id="merk10">...</td>
+                                            <td id="uid10">...</td>
+                                            <td class="font-weight-bold" id="status10">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>11</td>
+                                            <td id="namaAlat11">...</td>
+                                            <td id="merk11">...</td>
+                                            <td id="uid11">...</td>
+                                            <td class="font-weight-bold" id="status11">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>12</td>
+                                            <td id="namaAlat12">...</td>
+                                            <td id="merk12">...</td>
+                                            <td id="uid12">...</td>
+                                            <td class="font-weight-bold" id="status12">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>13</td>
+                                            <td id="namaAlat13">...</td>
+                                            <td id="merk13">...</td>
+                                            <td id="uid13">...</td>
+                                            <td class="font-weight-bold" id="status13">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>14</td>
+                                            <td id="namaAlat14">...</td>
+                                            <td id="merk14">...</td>
+                                            <td id="uid14">...</td>
+                                            <td class="font-weight-bold" id="status14">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>15</td>
+                                            <td id="namaAlat15">...</td>
+                                            <td id="merk15">...</td>
+                                            <td id="uid15">...</td>
+                                            <td class="font-weight-bold" id="status15">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>16</td>
+                                            <td id="namaAlat16">...</td>
+                                            <td id="merk16">...</td>
+                                            <td id="uid16">...</td>
+                                            <td class="font-weight-bold" id="status16">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>17</td>
+                                            <td id="namaAlat17">...</td>
+                                            <td id="merk17">...</td>
+                                            <td id="uid17">...</td>
+                                            <td class="font-weight-bold" id="status17">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>18</td>
+                                            <td id="namaAlat18">...</td>
+                                            <td id="merk18">...</td>
+                                            <td id="uid18">...</td>
+                                            <td class="font-weight-bold" id="status18">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>19</td>
+                                            <td id="namaAlat19">...</td>
+                                            <td id="merk19">...</td>
+                                            <td id="uid19">...</td>
+                                            <td class="font-weight-bold" id="status19">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>20</td>
+                                            <td id="namaAlat20">...</td>
+                                            <td id="merk20">...</td>
+                                            <td id="uid20">...</td>
+                                            <td class="font-weight-bold" id="status20">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>21</td>
+                                            <td id="namaAlat21">...</td>
+                                            <td id="merk21">...</td>
+                                            <td id="uid21">...</td>
+                                            <td class="font-weight-bold" id="status21">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>22</td>
+                                            <td id="namaAlat22">...</td>
+                                            <td id="merk22">...</td>
+                                            <td id="uid22">...</td>
+                                            <td class="font-weight-bold" id="status22">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>23</td>
+                                            <td id="namaAlat23">...</td>
+                                            <td id="merk23">...</td>
+                                            <td id="uid23">...</td>
+                                            <td class="font-weight-bold" id="status23">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>24</td>
+                                            <td id="namaAlat24">...</td>
+                                            <td id="merk24">...</td>
+                                            <td id="uid24">...</td>
+                                            <td class="font-weight-bold" id="status24">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>25</td>
+                                            <td id="namaAlat25">...</td>
+                                            <td id="merk25">...</td>
+                                            <td id="uid25">...</td>
+                                            <td class="font-weight-bold" id="status25">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>26</td>
+                                            <td id="namaAlat26">...</td>
+                                            <td id="merk26">...</td>
+                                            <td id="uid26">...</td>
+                                            <td class="font-weight-bold" id="status26">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>27</td>
+                                            <td id="namaAlat27">...</td>
+                                            <td id="merk27">...</td>
+                                            <td id="uid27">...</td>
+                                            <td class="font-weight-bold" id="status27">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>28</td>
+                                            <td id="namaAlat28">...</td>
+                                            <td id="merk28">...</td>
+                                            <td id="uid28">...</td>
+                                            <td class="font-weight-bold" id="status28">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>29</td>
+                                            <td id="namaAlat29">...</td>
+                                            <td id="merk29">...</td>
+                                            <td id="uid29">...</td>
+                                            <td class="font-weight-bold" id="status29">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>30</td>
+                                            <td id="namaAlat30">...</td>
+                                            <td id="merk30">...</td>
+                                            <td id="uid30">...</td>
+                                            <td class="font-weight-bold" id="status30">...</td>
+                                        </tr>
+                                        <tr>
+                                            <td>31</td>
+                                            <td id="namaAlat31">...</td>
+                                            <td id="merk31">...</td>
+                                            <td id="uid31">...</td>
+                                            <td class="font-weight-bold" id="status31">...</td>
+                                            <!--<td id="returnDate1">...</td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>32</td>
+                                            <td id="namaAlat32">...</td>
+                                            <td id="merk32">...</td>
+                                            <td id="uid32">...</td>
+                                            <td class="font-weight-bold" id="status32">...</td>
+                                            <!--<td id="returnDate2">...</td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>33</td>
+                                            <td id="namaAlat33">...</td>
+                                            <td id="merk33">...</td>
+                                            <td id="uid33">...</td>
+                                            <td class="font-weight-bold" id="status33">...</td>
+                                            <!--<td id="returnDate3">...</td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>34</td>
+                                            <td id="namaAlat34">...</td>
+                                            <td id="merk34">...</td>
+                                            <td id="uid34">...</td>
+                                            <td class="font-weight-bold" id="status34">...</td>
+                                            <!--<td id="returnDate4">...</td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>35</td>
+                                            <td id="namaAlat35">...</td>
+                                            <td id="merk35">...</td>
+                                            <td id="uid35">...</td>
+                                            <td class="font-weight-bold" id="status35">...</td>
+                                            <!--<td id="returnDate5">...</td>-->
+                                        </tr>
+                                        <tr>
+                                            <td>36</td>
+                                            <td id="namaAlat36">...</td>
+                                            <td id="merk36">...</td>
+                                            <td id="uid36">...</td>
+                                            <td class="font-weight-bold" id="status36">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>37</td>
+                                            <td id="namaAlat37">...</td>
+                                            <td id="merk37">...</td>
+                                            <td id="uid37">...</td>
+                                            <td class="font-weight-bold" id="status37">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>38</td>
+                                            <td id="namaAlat38">...</td>
+                                            <td id="merk38">...</td>
+                                            <td id="uid38">...</td>
+                                            <td class="font-weight-bold" id="status38">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>39</td>
+                                            <td id="namaAlat39">...</td>
+                                            <td id="merk39">...</td>
+                                            <td id="uid39">...</td>
+                                            <td class="font-weight-bold" id="status39">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>40</td>
+                                            <td id="namaAlat40">...</td>
+                                            <td id="merk40">...</td>
+                                            <td id="uid40">...</td>
+                                            <td class="font-weight-bold" id="status40">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>41</td>
+                                            <td id="namaAlat41">...</td>
+                                            <td id="merk41">...</td>
+                                            <td id="uid41">...</td>
+                                            <td class="font-weight-bold" id="status41">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>42</td>
+                                            <td id="namaAlat42">...</td>
+                                            <td id="merk42">...</td>
+                                            <td id="uid42">...</td>
+                                            <td class="font-weight-bold" id="status42">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>43</td>
+                                            <td id="namaAlat43">...</td>
+                                            <td id="merk43">...</td>
+                                            <td id="uid43">...</td>
+                                            <td class="font-weight-bold" id="status43">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>44</td>
+                                            <td id="namaAlat44">...</td>
+                                            <td id="merk44">...</td>
+                                            <td id="uid44">...</td>
+                                            <td class="font-weight-bold" id="status44">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>45</td>
+                                            <td id="namaAlat45">...</td>
+                                            <td id="merk45">...</td>
+                                            <td id="uid45">...</td>
+                                            <td class="font-weight-bold" id="status45">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>46</td>
+                                            <td id="namaAlat46">...</td>
+                                            <td id="merk46">...</td>
+                                            <td id="uid46">...</td>
+                                            <td class="font-weight-bold" id="status46">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>47</td>
+                                            <td id="namaAlat47">...</td>
+                                            <td id="merk47">...</td>
+                                            <td id="uid47">...</td>
+                                            <td class="font-weight-bold" id="status47">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>48</td>
+                                            <td id="namaAlat48">...</td>
+                                            <td id="merk48">...</td>
+                                            <td id="uid48">...</td>
+                                            <td class="font-weight-bold" id="status48">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>49</td>
+                                            <td id="namaAlat49">...</td>
+                                            <td id="merk49">...</td>
+                                            <td id="uid49">...</td>
+                                            <td class="font-weight-bold" id="status49">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>50</td>
+                                            <td id="namaAlat50">...</td>
+                                            <td id="merk50">...</td>
+                                            <td id="uid50">...</td>
+                                            <td class="font-weight-bold" id="status50">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>51</td>
+                                            <td id="namaAlat51">...</td>
+                                            <td id="merk51">...</td>
+                                            <td id="uid51">...</td>
+                                            <td class="font-weight-bold" id="status51">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>52</td>
+                                            <td id="namaAlat52">...</td>
+                                            <td id="merk52">...</td>
+                                            <td id="uid52">...</td>
+                                            <td class="font-weight-bold" id="status52">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>53</td>
+                                            <td id="namaAlat53">...</td>
+                                            <td id="merk53">...</td>
+                                            <td id="uid53">...</td>
+                                            <td class="font-weight-bold" id="status53">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>54</td>
+                                            <td id="namaAlat54">...</td>
+                                            <td id="merk54">...</td>
+                                            <td id="uid54">...</td>
+                                            <td class="font-weight-bold" id="status54">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>55</td>
+                                            <td id="namaAlat55">...</td>
+                                            <td id="merk55">...</td>
+                                            <td id="uid55">...</td>
+                                            <td class="font-weight-bold" id="status55">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>56</td>
+                                            <td id="namaAlat56">...</td>
+                                            <td id="merk56">...</td>
+                                            <td id="uid56">...</td>
+                                            <td class="font-weight-bold" id="status56">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>57</td>
+                                            <td id="namaAlat57">...</td>
+                                            <td id="merk57">...</td>
+                                            <td id="uid57">...</td>
+                                            <td class="font-weight-bold" id="status57">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>58</td>
+                                            <td id="namaAlat58">...</td>
+                                            <td id="merk58">...</td>
+                                            <td id="uid58">...</td>
+                                            <td class="font-weight-bold" id="status58">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>59</td>
+                                            <td id="namaAlat59">...</td>
+                                            <td id="merk59">...</td>
+                                            <td id="uid59">...</td>
+                                            <td class="font-weight-bold" id="status59">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>60</td>
+                                            <td id="namaAlat60">...</td>
+                                            <td id="merk60">...</td>
+                                            <td id="uid60">...</td>
+                                            <td class="font-weight-bold" id="status60">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>61</td>
+                                            <td id="namaAlat61">...</td>
+                                            <td id="merk61">...</td>
+                                            <td id="uid61">...</td>
+                                            <td class="font-weight-bold" id="status61">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>62</td>
+                                            <td id="namaAlat62">...</td>
+                                            <td id="merk62">...</td>
+                                            <td id="uid62">...</td>
+                                            <td class="font-weight-bold" id="status62">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>63</td>
+                                            <td id="namaAlat63">...</td>
+                                            <td id="merk63">...</td>
+                                            <td id="uid63">...</td>
+                                            <td class="font-weight-bold" id="status63">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>64</td>
+                                            <td id="namaAlat64">...</td>
+                                            <td id="merk64">...</td>
+                                            <td id="uid64">...</td>
+                                            <td class="font-weight-bold" id="status64">...</td>
+                                        </tr>
+                                         <tr>
+                                            <td>65</td>
+                                            <td id="namaAlat65">...</td>
+                                            <td id="merk65">...</td>
+                                            <td id="uid65">...</td>
+                                            <td class="font-weight-bold" id="status65">...</td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Integrated Laboratory System 2020</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary text-white" onclick="logout()">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+
+    <script src="js/dbConnection.js"></script>
+
+    <script>
+        var avail = 0;
+        var notAvail = 0;
+
+        var totalDevice = avail;
+
+        var i = 1;
+        var database = firebase.database();
+        var statusDeviceRef = database.ref('databaseAlat').orderByChild('uid');
+        statusDeviceRef.once('value', function(snapshot) {
+            snapshot.forEach((child) => {
+                updateTable(i, child.val().namaAlat, child.val().merek, child.val().uid, child.val().status)
+                i = i + 1;
+            });
+        });
+    </script>
+
+    <script>
+        function updateTable(i, namaAlat, merk, uid, status) {
+
+            i = "" + i;
+            var idNama = "namaAlat" + i;
+            var idMerk = "merk" + i;
+            var idUID = "uid" + i;
+            var idStatus = "status" + i;
+            var idReturn = "returnDate" + i;
+
+            document.getElementById(idNama).innerHTML = namaAlat;
+            document.getElementById(idMerk).innerHTML = merk;
+            document.getElementById(idUID).innerHTML = uid;
+            document.getElementById(idStatus).innerHTML = status;
+            if (status == "Tersedia") {
+                avail = avail + 1;
+                document.getElementById(idStatus).classList.add("text-success")
+                // document.getElementById(idReturn).innerHTML = "-"
+            } else {
+                // getReturnDate(uid, idReturn)
+                document.getElementById(idStatus).classList.add("text-danger")
+                notAvail = notAvail + 1;
+            }
+
+            // document.getElementById("jumlahAlatLabTersedia").innerHTML = avail;
+            // document.getElementById("jumlahAlatLabTdkTersedia").innerHTML = notAvail;
+            document.getElementById("jumlahAlatLab").innerHTML = avail;
+        }
+
+        function getReturnDate(uid, idReturn) {
+            var database = firebase.database();
+            var checkPeminjamanRef = database.ref("daftarPinjaman").orderByChild("uid").equalTo(uid)
+            checkPeminjamanRef.once("child_added", function(snapshot) {
+                var dataPinjaman = snapshot.val();
+                console.log(dataPinjaman.tglKembali);
+                document.getElementById(idReturn).innerHTML = dataPinjaman.tglKembali
+            })
+        }
+    </script>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    <script src="js/user-check.js"></script>
+
+
+
+</body>
+
+</html>

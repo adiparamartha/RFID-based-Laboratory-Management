@@ -1,0 +1,1 @@
+function logout(){firebase.auth().signOut().then(function(){window.location="login.html"}).catch(function(n){})}firebase.auth().onAuthStateChanged(function(n){n?document.getElementsByTagName("body")[0].style.display="block":window.location="login.html"});
